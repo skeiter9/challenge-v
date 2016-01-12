@@ -1,7 +1,12 @@
 const path = require('path');
+const webpack = require('webpack');
+
 const srcPath = __dirname;
 const buildPath = path.join(srcPath, 'build');
 const LiveReloadPlugin = require('webpack-livereload-plugin');
+
+const env = JSON.stringify(!!process.env.NODE_ENV &&
+  JSON.parse(process.env.NODE_ENV) === 'production' ? 'production' : 'development');
 
 const config = {
     context: __dirname,
@@ -56,9 +61,12 @@ const config = {
       ]
     },
     plugins: [
-        new LiveReloadPlugin({
-            appendScriptTag: true
-        })
+      new LiveReloadPlugin({
+        appendScriptTag: true
+      }),
+      new webpack.DefinePlugin({
+        __ENV__: env
+      }),
     ]
 };
 

@@ -1,6 +1,8 @@
 import angular from 'angular';
 
-//require('./styles/home.css');
+if (__ENV__ !== 'test') require('./styles/icons.css');
+
+require('./styles/layout.css');
 
 export default angular.module('wagonlayout', [])
 

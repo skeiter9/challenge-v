@@ -34,7 +34,7 @@ export const homeRoutes = ($sP) => {
         content: {
           template: require('./templates/home.jade')(),
           controller: ['layout', function(l) {
-            //l.hideAppbar = true;
+            //l.hideAppbar = true;production
           }]
         }
       }

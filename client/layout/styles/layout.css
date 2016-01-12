@@ -6,7 +6,6 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 
 @import '_base.css';
-@import '../assets/fonts/icomoon/style.css';
 
 .e404__box {
   @nest & span {

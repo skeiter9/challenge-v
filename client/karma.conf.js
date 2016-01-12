@@ -4,7 +4,7 @@ const srcPath = __dirname;
 module.exports = function(config) {
   config.set({
 
-  	frameworks: ['browserify', 'tap'],
+  	frameworks: ['tap'],
 
   	files: [
       'boot/app.js',
@@ -13,17 +13,19 @@ module.exports = function(config) {
 
   	preprocessors: {
       'boot/app.js': ['webpack'],
-      'app_test.js': ['browserify']
+      'app_test.js': ['webpack']
   	},
 
   	webpack: {
+      plugins: [
+        new webpack.DefinePlugin({
+          __ENV__: JSON.stringify('test')
+        }),
+      ],
+      node: {
+        fs: "empty"//very important for tape
+      },
 			module: {
-				resolve: {
-					modulesDirectories: ['mode_modules']
-				},
-				node: {
-  				fs: "empty"
-				},
         loaders: [
           {
               test: /\.js$/,
@@ -62,7 +64,6 @@ module.exports = function(config) {
   	browsers: ['Chrome'],
   	singleRun: false,
   	plugins: [
-			'karma-browserify',
 			'karma-webpack',
 			'karma-chrome-launcher',
       'karma-tap',
