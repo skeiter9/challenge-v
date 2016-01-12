@@ -1,0 +1,16 @@
+:root {
+    --mainColor: #06AED5;
+}
+
+* {
+    box-sizing: border-box;
+    @nest &:before, &:after { 
+        box-sizing: border-box;
+    }
+}
+
+body {
+    background: var(--mainColor);
+    color: red;
+}
+

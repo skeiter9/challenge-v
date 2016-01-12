@@ -25,7 +25,7 @@ const config = {
             },
             {
                 test: /\.css$/,
-                loaders: ['style', 'postcss'],
+                loaders: ['style', 'css' ,'postcss'],
                 include: [srcPath],
                 exclude: /node_modules/
             }
@@ -33,7 +33,9 @@ const config = {
     },
     postcss: function(a) {
         return [
-            require('autoprefixer')()
+            require('postcss-custom-properties')(),
+            require('autoprefixer')(),
+            require('postcss-nesting')()
         ]
     },
     plugins: [
