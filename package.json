@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "server/server.js",
   "scripts": {
+    "test:front": "cd client && npm run test",
     "start": "node server/server.js",
     "parallel": "parallelshell 'nodemon server/server.js' 'client/node_modules/.bin/webpack --watch --config client/webpack.config.js'",
     "pretest": "jshint ."

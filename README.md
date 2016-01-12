@@ -4,10 +4,30 @@
 - node >= 4.x
 - webpack >= 1.x
 
-# Install
+## run develepment server
+
+```
+  npm start
+```
+
+## Install
 
 ```
   npm install
 ```
 
-# Tests
+## Tests
+
+- Only frontend
+
+```
+  npm run test:front
+```
+
+### Gallery
+
+![splash](https://raw.githubusercontent.com/skeiter9/challenge-v/master/client/layout/assets/images/screenshot-splash.png)
+
+![signup](https://raw.githubusercontent.com/skeiter9/challenge-v/master/client/layout/assets/images/screenshot-signup.png)
+
+![register](https://raw.githubusercontent.com/skeiter9/challenge-v/master/client/layout/assets/images/screenshot-register.png)
