@@ -1,9 +1,14 @@
+@define-placeholder font-roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
 .btn--large {
   display: block;
   padding: 8px;
   width: 100%;
   border-radius: 2px;
   text-align: center;
+  @extend font-roboto;
 }
 
 .btn--small {
@@ -12,6 +17,7 @@
   width: auto;
   border-radius: 2px;
   text-align: center;
+  @extend font-roboto;
 }
 
 .btn--accent {
