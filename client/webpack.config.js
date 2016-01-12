@@ -4,6 +4,7 @@ const buildPath = path.join(srcPath, 'build');
 const LiveReloadPlugin = require('webpack-livereload-plugin');
 
 const config = {
+    context: __dirname,
     entry: {
         app: "./app.js"
     },
@@ -24,10 +25,16 @@ const config = {
                 exclude: /node_modules/
             },
             {
-                test: /\.css$/,
-                loaders: ['style', 'css' ,'postcss'],
-                include: [srcPath],
-                exclude: /node_modules/
+              test: /\.css$/,
+              loaders: ['style', 'css' ,'postcss'],
+              include: [srcPath],
+              exclude: /node_modules/
+            },
+            {
+              test: /\.jade$/,
+              loaders: ['jade'],
+              include: [srcPath],
+              exclude: /node_modules/
             }
         ]
     },

@@ -1,5 +1,6 @@
 {
     "verbose": true,
+    "watch": ["server/**", "client/webpack.config.js"],
     "ignore": ["node_modules/**"],
     "delay": 2
 }
