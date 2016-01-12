@@ -2,10 +2,16 @@ const path = require('path');
 const loopback = require('loopback');
 
 module.exports = function(server) {
-  // Install a `/` route that returns server status
-  var router = server.loopback.Router();
-  router.get('/', function(req, res) {
+
+  const router = server.loopback.Router();
+
+  const routeRegExp = server.get('env') === 'production' ?
+    /^\/(?!(api)(\/|\W)).*/ :
+    /^\/(?!(api|explorer|static)(\/|\W)).*/;
+
+  router.get(routeRegExp, function(req, res) {
     res.sendFile(path.join(__dirname, 'index.html'));
-    });
+  });
+
   server.use(router);
 };

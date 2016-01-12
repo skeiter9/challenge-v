@@ -1,26 +1,54 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
+import homeModule from '../home/home.js';
+import {homeRoutes, homeRules} from '../home/home.routes.js';
+import layoutModule from '../layout/layout.js';
+import {layoutRoutes} from '../layout/layout.routes.js';
 
-export default angular.module('wagon.routes', [
-  'ui.router'
-  ])
+export default angular.module('wagonRoutes', [
+  'ui.router',
+  layoutModule.name,
+  homeModule.name
+])
 
-  .config(['$stateProvider', function($sP) {
-  
+  .config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
+  function($sP, $uRP, $lP) {
+
+    $lP.html5Mode({
+      enabled: true,
+      requiBase: false
+    });
+
+    homeRules($uRP);
+
+    homeRoutes($sP);
+    layoutRoutes($sP);
+
     $sP
 
-    .state('home', {
-      url: '',
-      template: require('../home/templates/home.jade')()
-    })
+      .state('e404', {
+        url: '/404',
+        template: `
+          <wagon-splash></wagon-splash>
+          <aside class='e404__box'>
+            <span> 404 </span>
+            <span> Error</span>
+          </aside>
+        `
+      })
 
-    .state('vehicles', {
-      url: 'vehicles'
-    })
+  }])
 
-    .state('signUp', {
-      url: 'sign-up'
+  .run(['$state', '$rootScope', '$ocLazyLoad', ($st, $rS, $ocL) => {
+
+    $rS.$on('$stateChangeSuccess', (e, toState, toParams, fromState) => {
+      $st.current.data =  $st.current.data || {};
+      $st.current.data.prevState = fromState;
+    });
+
+    $rS.$on('$stateNotFound', (e, unfoundState, fromState, fromParams) => {
+        e.preventDefault();
+        $st.go('e404');
     });
 
   }]);
-

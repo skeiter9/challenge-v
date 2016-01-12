@@ -5,12 +5,4 @@ require('../layout/styles/layout.css');
 
 export default angular.module('app', [
   routes.name
-])
-
-  .directive('wagonSplash', [() => ({
-    restrict: 'E',
-    template: `
-      <img src='static/images/wagon-logo.png' />
-    `
-  })]);
-
+]);

@@ -1,0 +1,14 @@
+@import '../../layout/styles/_variables.css';
+@import '../../layout/styles/_alias.css';
+@import '../../layout/styles/_placeholders.css';
+
+@import '../../layout/styles/components/_btn.css';
+@import './sign-up.css';
+
+.home__options {
+  width: 90%;
+  margin: 0 auto;
+  @nest & a:first-of-type {
+    margin-bottom: 8px;
+  }
+}

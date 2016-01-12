@@ -1,0 +1,44 @@
+wagon-confirm,
+wagon-sign-up {
+  display: block;
+  label: #fff;
+  @nest & form {
+    width: 70%;
+    margin: 40px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @nest & label {
+      margin-top: 32px;
+      color: #fff;
+      display: block;
+    }
+
+    @nest & input {
+      margin-top: 40px;
+      background-color: transparent;
+      border-left: 0;
+      border-right: 0;
+      border-top: 0;
+      padding: 16px;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.60);
+      border-radius: 2px;
+      color: #fff;
+      @nest &:focus {
+        outline: 0;
+        border-bottom-color: transparent;
+        background-color: var(--accentColor);
+      }
+    }
+
+    @nest & button {
+      margin-top: 40px;
+      border: 0;
+      border-radius: 2px;
+      @nest &:focus {
+        outline: 0;
+      }
+    }
+  }
+}

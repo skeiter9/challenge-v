@@ -13,37 +13,47 @@ const config = {
         filename: "[name].bundle.js"
     },
     module: {
-        loaders: [
-            {
-                test: /\.js$/,
-                loader: 'babel',
-                query: {
-                    cacheDirectory: true,
-                    presets: ['es2015', 'stage-2']
-                },
-                include: [srcPath],
-                exclude: /node_modules/
-            },
-            {
-              test: /\.css$/,
-              loaders: ['style', 'css' ,'postcss'],
-              include: [srcPath],
-              exclude: /node_modules/
-            },
-            {
-              test: /\.jade$/,
-              loaders: ['jade'],
-              include: [srcPath],
-              exclude: /node_modules/
-            }
-        ]
+      loaders: [
+        {
+          test: /\.js$/,
+          loader: 'babel',
+          query: {
+              cacheDirectory: true,
+              presets: ['es2015', 'stage-2']
+          },
+          include: [srcPath],
+          exclude: /node_modules/
+        },
+        {
+          test: /\.css$/,
+          loaders: ['style', 'css' ,'postcss'],
+          include: [srcPath],
+          exclude: /node_modules/
+        },
+        {
+          test: /\.jade$/,
+          loaders: ['jade'],
+          include: [srcPath],
+          exclude: /node_modules/
+        },
+        {
+          test: /\.(eot|ttf|svg|woff|woff2)$/,
+          loaders: ['url?limit=40000&name=[name].[ext]'],
+          include: [srcPath]
+        }
+      ]
     },
-    postcss: function(a) {
-        return [
-            require('postcss-custom-properties')(),
-            require('autoprefixer')(),
-            require('postcss-nesting')()
-        ]
+    postcss: function(webpack) {
+      return [
+        require('postcss-import')({
+          addDependencyTo: webpack
+        }),
+        require('postcss-alias')(),
+        require('postcss-custom-properties')(),
+        require('postcss-extend')(),
+        require('autoprefixer')(),
+        require('postcss-nesting')()
+      ]
     },
     plugins: [
         new LiveReloadPlugin({
@@ -53,4 +63,3 @@ const config = {
 };
 
 module.exports = config;
-

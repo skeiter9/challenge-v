@@ -1,0 +1,7 @@
+form(name='form' novalidate='')
+  label Type your mobile number
+  input(required name='phone' type='tel' ng-model='signUp.phone')
+  button(
+    class='btn--accent btn--small'
+    ng-click='signUp.send(form)'
+  ) VERIFY

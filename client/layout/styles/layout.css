@@ -1,55 +1,18 @@
-:root {
-    --mainColor: #06AED5;
-    --accentColor: #086788;
-    --fallbackColor: #fff;
-}
+@import '_variables.css';
+@import '_alias.css';
+@import '_placeholders.css';
 
-* {
-    box-sizing: border-box;
-    @nest &:before, &:after { 
-        box-sizing: border-box;
+@import '_reset.css';
+@import '_base.css';
+@import '../assets/fonts/icomoon/style.css';
+
+.e404__box {
+  @nest & span {
+    color: #fff;
+    display: block;
+    text-align: center;
+    @nest &:first-of-type {
+      font-size: 32px;
     }
-}
-
-body {
-  background: var(--mainColor);
-  margin: 0;
-}
-
-/* components */
-
-.btn--large {
-  display: block;
-  padding: 8px;
-  width: 100%;
-  border-radius: 2px;
-  text-align: center;
-}
-
-.btn--accent {
-  background-color: var(--accentColor);
-  color: #fff;
-}
-
-.btn--fallback {
-  background-color: var(--fallbackColor);
-  color: var(--accentColor);
-}
-
-/* wagon-splash component */
-wagon-splash {
-  display: block;
-  text-align: center;
-  margin: 16px auto;
-}
-
-/* home section */
-
-.home__options {
-  width: 90%;
-  margin: 0 auto;
-  @nest & a:first-of-type {
-    margin-bottom: 8px;
   }
 }
-

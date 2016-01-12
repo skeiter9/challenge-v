@@ -24,10 +24,12 @@
     }
   },
   "files": {
-      "loopback#static": [{
+    "loopback#static": [
+      {
         "paths": "/static",
         "params": "$!./../client"
-      }]
+      }
+    ]
   },
   "final": {
     "loopback#urlNotFound": {}
