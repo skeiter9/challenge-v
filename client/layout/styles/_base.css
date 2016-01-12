@@ -1,5 +1,6 @@
 body {
   background-color: var(--primaryColor);
+  font-family: 'Roboto', sans-serif;
 }
 
 [class^="icon-"], [class*=" icon-"] {
