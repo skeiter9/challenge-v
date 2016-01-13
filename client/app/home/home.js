@@ -1,12 +1,14 @@
 import angular from 'angular';
 import appbarModule from '../components/appbar/appbar.js';
 import splashModule from '../components/splash/splash.js';
+import vehicleModule from '../components/vehicle/vehicle.js';
 
 require('./styles/home.css');
 
 export default angular.module('wagonHome', [
   appbarModule.name,
-  splashModule.name
+  splashModule.name,
+  vehicleModule.name
 ])
 
   .directive('wagonHomePage', [() => ({
