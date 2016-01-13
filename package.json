@@ -6,7 +6,8 @@
     "test:front": "cd client && npm run test",
     "start": "node server/server.js",
     "parallel": "parallelshell 'nodemon server/server.js' 'client/node_modules/.bin/webpack --watch --config client/webpack.config.js'",
-    "pretest": "jshint ."
+    "pretest": "jshint .",
+    "postinstall": "cd client && npm install"
   },
   "dependencies": {
     "compression": "^1.0.3",
@@ -24,8 +25,8 @@
     "parallelshell": "^2.0.0"
   },
   "repository": {
-    "type": "",
-    "url": ""
+    "type": "git",
+    "url": "https://github.com/skeiter9/challenge-v"
   },
-  "description": "challenge-v"
+  "description": "challenge-v app"
 }

@@ -4,16 +4,16 @@
 - node >= 4.x
 - webpack >= 1.x
 
-## run develepment server
-
-```
-  npm start
-```
-
 ## Install
 
 ```
   npm install
+```
+
+## run develepment server
+
+```
+  npm start
 ```
 
 ## Tests
@@ -25,6 +25,8 @@
 ```
 
 ### Gallery
+
+![demo](https://raw.githubusercontent.com/skeiter9/challenge-v/master/client/assets/images/demo.gif)
 
 ![splash](https://raw.githubusercontent.com/skeiter9/challenge-v/master/client/assets/images/screenshot-splash.png)
 
