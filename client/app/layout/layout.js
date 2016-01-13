@@ -1,6 +1,6 @@
 import angular from 'angular';
 
-if (__ENV__ !== 'test') require('./styles/icons.css');
+if (__ENV__ !== 'test') require('./assets/fonts/icomoon/style.css');
 
 require('./styles/layout.css');
 

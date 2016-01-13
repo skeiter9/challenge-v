@@ -1,22 +1,6 @@
+/*
 @define-placeholder font-roboto {
   font-family: 'Roboto', sans-serif;
-}
-
-.btnLarge {
-  display: block;
-  padding: 8px;
-  width: 100%;
-  border-radius: 2px;
-  text-align: center;
-  @extend font-roboto;
-}
-
-.btnFab {
-  display: block;
-  padding: 8px;
-  border-radius: 50%;
-  text-align: center;
-  @extend font-roboto;
 }
 
 .btn--small {
@@ -39,6 +23,31 @@
 }
 
 /* wagon-splash component */
+
+
+.btnSmall {
+  display: block;
+  width: auto;
+  padding: 8px 32px;
+  border-radius: 2px;
+  text-align: center;
+}
+
+.btnLarge {
+  display: block;
+  padding: 8px;
+  width: 100%;
+  border-radius: 2px;
+  text-align: center;
+}
+
+.btnFab {
+  display: block;
+  padding: 8px;
+  border-radius: 50%;
+  text-align: center;
+}
+
 wagon-splash {
   display: block;
   text-align: center;

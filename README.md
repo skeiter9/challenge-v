@@ -31,3 +31,7 @@
 ![signup](https://raw.githubusercontent.com/skeiter9/challenge-v/master/client/assets/images/screenshot-signup.png)
 
 ![register](https://raw.githubusercontent.com/skeiter9/challenge-v/master/client/assets/images/screenshot-register.png)
+
+![dashboard](https://raw.githubusercontent.com/skeiter9/challenge-v/master/client/assets/images/screenshot-dashboard.png)
+
+![new Vehicle](https://raw.githubusercontent.com/skeiter9/challenge-v/master/client/assets/images/screenshot-new-vehicle.png)

@@ -1,12 +1,11 @@
 @import '_variables.css';
-@import '_alias.css';
-@import '_placeholders.css';
 
 @import '_reset.css';
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 
 @import '_base.css';
 
+/*
 .e404__box {
   @nest & span {
     color: #fff;
@@ -17,3 +16,4 @@
     }
   }
 }
+*/

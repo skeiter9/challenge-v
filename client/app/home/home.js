@@ -2,44 +2,24 @@ import angular from 'angular';
 import appbarModule from '../components/appbar/appbar.js';
 import splashModule from '../components/splash/splash.js';
 import vehicleModule from '../components/vehicle/vehicle.js';
+import signUpModule from '../components/sign-up/sign-up.js';
 
-require('./styles/home.css');
+import styles from "./styles/home.css";
 
 export default angular.module('wagonHome', [
   appbarModule.name,
   splashModule.name,
-  vehicleModule.name
+  vehicleModule.name,
+  signUpModule.name
 ])
 
   .directive('wagonHomePage', [() => ({
     restrict: 'E',
-    template: require('./templates/home.jade')()
-  })])
-
-  .directive('wagonSignUp', [() => ({
-    restrict: 'E',
-    template: require('./templates/sign-up.jade')(),
-    controller: ['$state', '$log', function($st, $l) {
-
-      this.send = (form) => {
-        if (form.$valid) $st.go('confirm');
-        else $l.debug('phone input is wrong');
-      };
-
-    }],
-    controllerAs: 'signUp'
-  })])
-
-  .directive('wagonConfirm', [() => ({
-    restrict: 'E',
-    template: require('./templates/confirm.jade')(),
-    controller: ['$state', '$log', function($st, $l) {
-
-      this.send = (form) => {
-        if (form.$valid) $st.go('dashboard');
-        else $l.debug('security code is wrong');
-      };
-
-    }],
-    controllerAs: 'confirm'
+    template: require('./templates/home.jade')(),
+    compile(tE) {
+      tE.find('div').eq(0).addClass(styles.hOptions);
+      const buttons = tE.find('a');
+      buttons.eq(0).addClass(styles.hSignUp);
+      buttons.eq(1).addClass(styles.hSignIn);
+    }
   })]);

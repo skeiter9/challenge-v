@@ -1,6 +1,7 @@
 body {
   background-color: var(--primaryColor);
   font-family: 'Roboto', sans-serif;
+  line-height: 1.25;
 }
 
 [class^="icon-"], [class*=" icon-"] {

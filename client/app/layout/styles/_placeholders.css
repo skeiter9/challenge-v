@@ -1,16 +1,18 @@
 @import '_variables.css';
 
-.bgWhite {
-  background-color: #fff;
-}
-
 .bgPrimary {
   background-color: var(--primaryColor);
-  color: #fff;
+  color: var(--fallbackColor);
 }
 
 .bgAccent {
   background-color: var(--accentColor);
+  color: var(--fallbackColor);
+}
+
+.bgFallback {
+  background-color: var(--fallbackColor);
+  color: var(--accentColor);
 }
 
 .colorPrimary {
@@ -19,6 +21,10 @@
 
 .displayBlock {
   display: block;
+}
+
+.textAlignCenter {
+  text-align: center;
 }
 
 .avatar {

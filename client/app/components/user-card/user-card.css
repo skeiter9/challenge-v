@@ -1,5 +1,5 @@
 .container {
-  composes: bgWhite displayBlock from '../../layout/styles/_placeholders.css';
+  composes: bgFallback displayBlock from '../../layout/styles/_placeholders.css';
   padding-top: 16px;
 }
 
