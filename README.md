@@ -26,8 +26,8 @@
 
 ### Gallery
 
-![splash](https://raw.githubusercontent.com/skeiter9/challenge-v/master/client/layout/assets/images/screenshot-splash.png)
+![splash](https://raw.githubusercontent.com/skeiter9/challenge-v/master/client/assets/images/screenshot-splash.png)
 
-![signup](https://raw.githubusercontent.com/skeiter9/challenge-v/master/client/layout/assets/images/screenshot-signup.png)
+![signup](https://raw.githubusercontent.com/skeiter9/challenge-v/master/client/assets/images/screenshot-signup.png)
 
-![register](https://raw.githubusercontent.com/skeiter9/challenge-v/master/client/layout/assets/images/screenshot-register.png)
+![register](https://raw.githubusercontent.com/skeiter9/challenge-v/master/client/assets/images/screenshot-register.png)
