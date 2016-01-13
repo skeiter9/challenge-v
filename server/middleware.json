@@ -27,7 +27,11 @@
     "loopback#static": [
       {
         "paths": "/static",
-        "params": "$!./../client"
+        "params": "$!./../client/assets"
+      },
+      {
+        "paths": "/build",
+        "params": "$!./../client/build"
       }
     ]
   },

@@ -9,7 +9,7 @@ export default angular.module('wagonHome', [
 
   .directive('wagonSplash', [() => ({
     restrict: 'E',
-    template: `<img src='static/layout/assets/images/wagon-logo.png' />`
+    template: `<img src='static/images/wagon-logo.png' />`
   })])
 
   .directive('wagonSignUp', [() => ({

@@ -6,8 +6,8 @@ module.exports = function(server) {
   const router = server.loopback.Router();
 
   const routeRegExp = server.get('env') === 'production' ?
-    /^\/(?!(api)(\/|\W)).*/ :
-    /^\/(?!(api|explorer|static)(\/|\W)).*/;
+    /^\/(?!(api|static|build)(\/|\W)).*/ :
+    /^\/(?!(api|static|build|explorer)(\/|\W)).*/;
 
   router.get(routeRegExp, function(req, res) {
     res.sendFile(path.join(__dirname, 'index.html'));

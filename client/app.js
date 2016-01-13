@@ -1,5 +1,5 @@
 import angular from 'angular';
-import app from './boot/app.js';
+import app from './app/boot/app.js';
 import oclazyload from 'oclazyload';
 
 {

@@ -7,12 +7,12 @@ module.exports = function(config) {
   	frameworks: ['tap'],
 
   	files: [
-      'boot/app.js',
+      'app/boot/app.js',
   	  'app_test.js'
   	],
 
   	preprocessors: {
-      'boot/app.js': ['webpack'],
+      'app/boot/app.js': ['webpack'],
       'app_test.js': ['webpack']
   	},
 
