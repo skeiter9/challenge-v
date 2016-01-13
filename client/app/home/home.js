@@ -1,15 +1,17 @@
 import angular from 'angular';
 import appbarModule from '../components/appbar/appbar.js';
+import splashModule from '../components/splash/splash.js';
 
 require('./styles/home.css');
 
 export default angular.module('wagonHome', [
-  appbarModule.name
+  appbarModule.name,
+  splashModule.name
 ])
 
-  .directive('wagonSplash', [() => ({
+  .directive('wagonHomePage', [() => ({
     restrict: 'E',
-    template: `<img src='static/images/wagon-logo.png' />`
+    template: require('./templates/home.jade')()
   })])
 
   .directive('wagonSignUp', [() => ({
@@ -32,7 +34,7 @@ export default angular.module('wagonHome', [
     controller: ['$state', '$log', function($st, $l) {
 
       this.send = (form) => {
-        if (form.$valid) $st.go('home');
+        if (form.$valid) $st.go('dashboard');
         else $l.debug('security code is wrong');
       };
 

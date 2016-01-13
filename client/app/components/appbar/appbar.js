@@ -15,8 +15,14 @@ export default angular.module('wagonAppbar', [])
     bindToController: true,
     controllerAs: 'appbar',
     template: `
-      <a class='icon-arrow_back' ng-click='appbar.leftIconFn()'></a>
+      <section>
+        <!--<a class='icon-arrow_back' ng-click='appbar.leftIconFn()'></a>-->
+        <a class='icon-menu'></a>
+      </section>
       <h1> {{appbar.title | uppercase}} </h1>
-      <a class='icon-search' ng-hide='appbar.hideSearch'></a>
+      <section>
+        <a class='icon-search' ng-hide='appbar.hideSearch'></a>
+      </section>
+
     `
   })]);

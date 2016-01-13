@@ -1,14 +1,18 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
+
 import homeModule from '../home/home.js';
-import {homeRoutes, homeRules} from '../home/home.routes.js';
 import layoutModule from '../layout/layout.js';
+import dashboardModule from '../dashboard/dashboard.js';
+
+import {homeRoutes, homeRules} from '../home/home.routes.js';
 import {layoutRoutes} from '../layout/layout.routes.js';
 
 export default angular.module('wagonRoutes', [
   'ui.router',
   layoutModule.name,
-  homeModule.name
+  homeModule.name,
+  dashboardModule.name
 ])
 
   .config(['$stateProvider', '$urlRouterProvider', '$locationProvider',

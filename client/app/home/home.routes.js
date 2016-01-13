@@ -25,17 +25,18 @@ export const homeRoutes = ($sP) => {
       url: '/',
       resolve: {
         r: ['$q', 'layout', ($q, l) => {
+          /*home
           l.hideAppbar = true;
-          l.title = '';
+          */
+          //dashboard
+          l.hideAppbar = false;
+          l.title = 'profile';
           return $q.when();
         }]
       },
       views: {
         content: {
-          template: require('./templates/home.jade')(),
-          controller: ['layout', function(l) {
-            //l.hideAppbar = true;production
-          }]
+          template: '<wagon-dashboard-page />'
         }
       }
     })

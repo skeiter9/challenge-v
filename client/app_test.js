@@ -8,15 +8,10 @@ const routesTests = require('./app/routes/routes_test.js');
 
   window.addEventListener('load', () => {
 
-    test('check routes', (t) => {
+    const app = angular.bootstrap(document.body, ['app', 'oc.lazyLoad', 'ngMock']);
+    const $state = app.get('$state');
 
-      const app = angular.bootstrap(document.body, ['app', 'oc.lazyLoad', 'ngMock']);
-      const $state = app.get('$state');
-
-      routesTests(t, app);
-
-      t.end();
-    });
+    routesTests(test, app);
 
   });
 

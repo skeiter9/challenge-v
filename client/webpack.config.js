@@ -30,7 +30,11 @@ const config = {
         },
         {
           test: /\.css$/,
-          loaders: ['style', 'css' ,'postcss'],
+          loaders: [
+            'style',
+            'css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]' ,
+            'postcss'
+          ],
           include: [srcPath],
           exclude: /node_modules/
         },
@@ -52,11 +56,11 @@ const config = {
         require('postcss-import')({
           addDependencyTo: webpack
         }),
+        require('postcss-nesting')(),
         require('postcss-alias')(),
         require('postcss-custom-properties')(),
         require('postcss-extend')(),
-        require('autoprefixer')(),
-        require('postcss-nesting')()
+        require('autoprefixer')()
       ]
     },
     plugins: [
