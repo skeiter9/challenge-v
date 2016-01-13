@@ -1,3 +1,8 @@
+.hContainer {
+  display: block;
+  composes: container from '../../layout/styles/_placeholders.css';
+}
+
 .hOptions {
   width: 90%;
   margin: 0 auto;

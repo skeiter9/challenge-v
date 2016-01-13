@@ -4,7 +4,10 @@ if (__ENV__ !== 'test') require('./assets/fonts/icomoon/style.css');
 
 require('./styles/layout.css');
 
-export default angular.module('wagonlayout', [])
+export default angular.module('wagonlayout', [
+  require('angular-animate'),
+  require('ng-fx')
+])
 
   .run(['$$rAF', ($$rAF) => {
     //resize event optimized through requestAnimationFrame

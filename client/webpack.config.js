@@ -13,8 +13,9 @@ const config = {
         app: "./app.js"
     },
     output: {
-        path: buildPath,
-        filename: "[name].bundle.js"
+      path: buildPath,
+      filename: "[name].bundle.js",
+      publicPath: "/build/"
     },
     module: {
       loaders: [
@@ -45,8 +46,8 @@ const config = {
           exclude: /node_modules/
         },
         {
-          test: /\.(eot|ttf|svg|woff|woff2)$/,
-          loaders: ['url?limit=40000&name=[name].[ext]'],
+          test: /\.(eot|ttf|svg|woff|woff2|png)$/,
+          loaders: ['url?limit=80000&name=[name].[ext]'],
           include: [srcPath]
         }
       ]

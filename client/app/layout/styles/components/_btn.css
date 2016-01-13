@@ -1,36 +1,10 @@
-/*
-@define-placeholder font-roboto {
-  font-family: 'Roboto', sans-serif;
-}
-
-.btn--small {
-  display: block;
-  padding: 8px;
-  width: auto;
-  border-radius: 2px;
-  text-align: center;
-  @extend font-roboto;
-}
-
-.btn--accent {
-  background-color: var(--accentColor);
-  color: #fff;
-}
-
-.btn--fallback {
-  background-color: var(--fallbackColor);
-  color: var(--accentColor);
-}
-
-/* wagon-splash component */
-
-
 .btnSmall {
   display: block;
   width: auto;
   padding: 8px 32px;
   border-radius: 2px;
   text-align: center;
+  font-family: 'Roboto', sans-serif;
 }
 
 .btnLarge {
@@ -39,6 +13,7 @@
   width: 100%;
   border-radius: 2px;
   text-align: center;
+  font-family: 'Roboto', sans-serif;
 }
 
 .btnFab {
@@ -46,6 +21,7 @@
   padding: 8px;
   border-radius: 50%;
   text-align: center;
+  font-family: 'Roboto', sans-serif;
 }
 
 wagon-splash {

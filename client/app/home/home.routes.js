@@ -25,11 +25,7 @@ export const homeRoutes = ($sP) => {
       url: '/',
       resolve: {
         r: ['$q', 'layout', ($q, l) => {
-          //home
           l.hideAppbar = true;
-          //dashboard
-          //l.hideAppbar = false;
-          //l.title = 'profile';
           return $q.when();
         }]
       },
@@ -47,6 +43,7 @@ export const homeRoutes = ($sP) => {
         r: ['$q', 'layout', ($q, l) => {
           l.hideAppbar = false;
           l.hideSearch = true;
+          l.leftIconName = 'back';
           l.title = '';
           return $q.when();
         }]
@@ -78,6 +75,7 @@ export const homeRoutes = ($sP) => {
         r: ['$q', 'layout', ($q, l) => {
           l.hideAppbar = false;
           l.hideSearch = true;
+          l.leftIconName = 'back';
           l.title = '';
           return $q.when();
         }]
@@ -94,7 +92,7 @@ export const homeRoutes = ($sP) => {
                   $st.current.data.prevState.name !== '' ||
                   $st.current.data.prevState.name === ''
                 )
-              ) $st.go('signUp');
+              ) $st.go('dashboard');
             };
 
           }]

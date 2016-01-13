@@ -9,6 +9,9 @@
 
 .sectionRight {
   composes: bgPrimary from '../../layout/styles/_placeholders.css';
+  background-image: url('../../layout/assets/images/bg-car.png');
+  background-position: right;
+  background-repeat: no-repeat;
   margin-top: 16px;
   padding-top: 24px;
 }
@@ -25,8 +28,4 @@
 
 .avatar {
   composes: avatar from '../../layout/styles/_placeholders.css';
-}
-
-.nav {
-  background: red;
 }

@@ -2,7 +2,7 @@
 
 .suContainer {
   display: block;
-  padding: 24px;
+  composes: container from '../../layout/styles/_placeholders.css';
 }
 .suLabel {
   margin-top: 32px;

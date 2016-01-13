@@ -46,6 +46,7 @@
     "angular-ui-router": "^0.2.15",
     "autoprefixer": "^6.2.3",
     "babel-runtime": "^6.3.19",
+    "ng-fx": "^2.0.4",
     "oclazyload": "^1.0.9",
     "postcss-extend": "^1.0.1"
   }

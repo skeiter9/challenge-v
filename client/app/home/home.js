@@ -17,6 +17,7 @@ export default angular.module('wagonHome', [
     restrict: 'E',
     template: require('./templates/home.jade')(),
     compile(tE) {
+      tE.addClass(styles.hContainer);
       tE.find('div').eq(0).addClass(styles.hOptions);
       const buttons = tE.find('a');
       buttons.eq(0).addClass(styles.hSignUp);

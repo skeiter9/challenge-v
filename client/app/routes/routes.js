@@ -6,6 +6,7 @@ import layoutModule from '../layout/layout.js';
 import dashboardModule from '../dashboard/dashboard.js';
 
 import {homeRoutes, homeRules} from '../home/home.routes.js';
+import {dashboardRoutes, dashboardRules} from '../dashboard/dashboard.routes.js';
 import {layoutRoutes} from '../layout/layout.routes.js';
 
 export default angular.module('wagonRoutes', [
@@ -26,6 +27,7 @@ export default angular.module('wagonRoutes', [
     homeRules($uRP);
 
     homeRoutes($sP);
+    dashboardRoutes($sP);
     layoutRoutes($sP);
 
     $sP

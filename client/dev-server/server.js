@@ -8,11 +8,7 @@ const app = express();
 const isProduction = app.get('env') === 'production';
 const port = isProduction ? 8080 : 3000;
 
-const routeRegExp = app.get('env') === 'production' ?
-  /^\/(?!(static|build)(\/|\W)).*/ :
-  /^\/(?!(static|build)(\/|\W)).*/;
-
-app.get(routeRegExp, function(req, res) {
+app.get(/^\/(?!(static|build)(\/|\W)).*/, function(req, res) {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
